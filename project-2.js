@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-  <meta charset="UTF-8">
-    <script type="text/javascipt">
-    
   document.addEventListener('DOMContentLoaded', function() {
+   let tasks=[];
+    
+    var myNodeList=document.getElementsByTagName("li")
+    var i;
+    for (i = 0; i< myNodeList.length; i++) {
+      
     document.querySelector("new-task").onsubmit = function() {
       const li=document.createElement('li');
       li.innerHTML=document.querySelector('#task').value;
@@ -14,6 +14,15 @@
       
       return false;
     }
+      let priority_level=document.querySelector('#priority').value-1;
+     var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'li') {
+    ev.target.classList.toggle('checked');
+  }
+} 
+             return false;
+                      
       let tast_text=document.querySelector('#task').value;
       let new_task_html=
                               <span> ${task_text} </span>
