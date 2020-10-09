@@ -4,3 +4,13 @@ h1{
 li a:hover{
   background-color: grey
 }
+.addBtn{
+  padding: 15px;
+  width: 25%;
+  background: white;
+  color: #555
+  text-align: center;
+}
+.addBtn:hover {
+  back-ground color: grey;
+}
