@@ -3,13 +3,22 @@
     
     var myNodeList=document.getElementsByTagName("li")
     var i;
-    for (i = 0; i< myNodeList.length; i++) {
     
       function newElement() {
         var li=document.createElement('li');
         var myPriority=document.getElementById("myInput")value;
     document.querySelector("new-task").onsubmit = function() {
-      
+      for (i = 0; i< myNodeList.length; i++) 
+      {
+      let i = document,getElementByName(tasks[i]);
+            for(j = 0; j < item.length; j++)
+            {
+                if (item[j].checked && item[j].value === "complete-task")
+                {
+                    let text = document.getElementById(tasks[i] + "text");
+                    console.log(text);
+                    text.style.textDecoration = "line-through";
+                  
       li.innerHTML=document.querySelector('#task').value;
       
       document.querySelector("#tasks_list").append(li);
@@ -38,6 +47,15 @@ list.addEventListener('click', function(ev) {
     document.querySelector("#task").value = ' ';
       return false;
     }
+        let i = document.getElementsByName(tasks[i]);
+            for(j = 0; j < item.length; j++)
+            {
+                if (item[j].checked && item[j].value === "complete-task")
+                {
+                    let text = document.getElementById(tasks[i] + "text");
+                    console.log(text);
+                    text.style.textDecoration = "line-through";
+                  
       document.addEventListener('click', function(event) {
         element=event.target;
       if(element.className === 'remove') {
@@ -49,21 +67,3 @@ list.addEventListener('click', function(ev) {
       div.style.display = "none";
     });
                       
-      </script>
-      </head>
-      <body>
-      <h1>Task List</h1>
-<ul id="tasks_list">
-  </ul>
-<form id="new-task">
-  <input id="task" autocomplete="off" autofocusc placeholder="New Task" type="text">
-    <input id="submit" type="submit">
-      
-      
-  
-      <form id="form">
-        <input id="message" type="text"/>
-          <input type="submit">
-            </form>
-      </body>
-  </html>
