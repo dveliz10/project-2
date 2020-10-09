@@ -1,12 +1,15 @@
   document.addEventListener('DOMContentLoaded', function() {
-   let tasks=[];
+   var tasks=[];
     
     var myNodeList=document.getElementsByTagName("li")
     var i;
     for (i = 0; i< myNodeList.length; i++) {
-      
+    
+      function newElement() {
+        var li=document.createElement('li');
+        var myPriority=document.getElementById("myInput")value;
     document.querySelector("new-task").onsubmit = function() {
-      const li=document.createElement('li');
+      
       li.innerHTML=document.querySelector('#task').value;
       
       document.querySelector("#tasks_list").append(li);
@@ -14,7 +17,10 @@
       
       return false;
     }
-      let priority_level=document.querySelector('#priority').value-1;
+      var myPriority=document.getElementById("myPriority').value;
+           var t=document.createTextNode(inputValue);
+      var p=document.createTextNode(priorityValue
+                                   );
      var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'li') {
@@ -37,7 +43,10 @@ list.addEventListener('click', function(ev) {
       if(element.className === 'remove') {
         element.parentElement.remove();
       }
-      
+      for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
     });
                       
       </script>
