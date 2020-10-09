@@ -14,3 +14,11 @@ li a:hover{
 .addBtn:hover {
   back-ground color: grey;
 }
+if (priority== 1){
+ li.style.backgroundColor = red;
+  }
+  else if (priority==2){
+   li.style.backgroundColor = yellow;
+  }
+  else if (priority==3){
+     li.style.backgroundColor = green;
